@@ -26,6 +26,10 @@ exports.main = async (context = {}, sendResponse) => {
         },
         {
           type: "text",
+          text: `Le type contact de ${firstname} ${lastname} est ${type_contact}`
+        },
+        {
+          type: "text",
           format: "markdown",
           text: "This serverless function will retrieve a specific contact by ID."
         },

@@ -24,7 +24,7 @@ exports.main = async (context = {}, sendResponse) => {
   };
   const errorMessage = {
     "type": "text",
-    "text": "Le type contact n'est pas défini",
+    "text": `Le type contact est ${type_contact}`,
   };
   
   if (type_contact === 'Client') {

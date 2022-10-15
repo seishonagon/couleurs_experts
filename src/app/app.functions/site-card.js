@@ -23,10 +23,24 @@ exports.main = async (context = {}, sendResponse) => {
     "alt": "Bandeau brun contact client"
   };
   
+  if (type_contact === 'Client') {
+    const bandeau = {
+      "type": "image",
+      "src": "https://cdn.experconnect.com/crm/expert_green.png",
+      "alt": "Bandeau vert expert"
+    };
+  } else {
+    const bandeau = {
+      "type": "image",
+      "src": "https://cdn.experconnect.com/crm/expert_green.png",
+      "alt": "Bandeau vert expert"
+    };
+  }
+  
   // Defines the first section of the CRM card
 
   try {    
-    sendResponse({ sections: [bandeauExpert, bandeauContactClient] });
+    sendResponse({ sections: [bandeau] });
     
     // sendResponse({
     //   sections: [{

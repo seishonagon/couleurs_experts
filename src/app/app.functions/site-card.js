@@ -22,13 +22,14 @@ exports.main = async (context = {}, sendResponse) => {
         },
         {
           type: "text",
+          format:"markdown",
           text: `Le type contact de ${firstname} ${lastname} est **${type_contact}**`
         },
-          {
-            "type": "image",
-            "src": "https://www.ui-extensibility.com/hubfs/welcome-sign.png",
-            "alt": "A Welcome Sign sample image"
-          }
+        {
+          "type": "image",
+          "src": "https://cdn.experconnect.com/crm/expert_green.png",
+          "alt": "A Welcome Sign sample image"
+        }
       ]
     });
   } catch (error) {

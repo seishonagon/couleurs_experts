@@ -22,22 +22,34 @@ exports.main = async (context = {}, sendResponse) => {
     "src": "https://cdn.experconnect.com/crm/contact_brown.png",
     "alt": "Bandeau brun contact client"
   };
+  
   // Defines the first section of the CRM card
 
-  try {    sendResponse({
-      sections: [{
-          "type": "image",
-          "src": "https://cdn.experconnect.com/crm/expert_green.png",
-          "alt": "Bandeau vert expert"
-        },
-        {
-          type: "text",
-          format: "markdown",
-          text: `Le type contact de ${firstname} ${lastname} est **${type_contact}**`
-        },
-      ]
-    });
+  try {    
+    sendResponse({ sections: [bandeauExpert, ...bandeauContactClient] });
+    
+    // sendResponse({
+    //   sections: [{
+    //       "type": "image",
+    //       "src": "https://cdn.experconnect.com/crm/expert_green.png",
+    //       "alt": "Bandeau vert expert"
+    //     },
+    //     {
+    //       type: "text",
+    //       format: "markdown",
+    //       text: `Le type contact de ${firstname} ${lastname} est **${type_contact}**`
+    //     },
+    //   ]
+    // });
   } catch (error) {
     console.error(error);
+    // "message" will create an error feedback banner when it catches an error
+    sendResponse({
+      message: {
+        type: 'ERROR',
+        body: `Error: ${error.message}`
+      },
+      sections: [introMessage]
+    });
   }
 };

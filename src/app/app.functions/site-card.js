@@ -41,6 +41,6 @@ exports.main = async (context = {}, sendResponse) => {
         "alt": "Bandeau brun contact client"
       }], 
     });
-  }
-  console.log(`${type_contact}, `${type_contact}` === `Expert`)
+  };
+  console.log(`${type_contact}`, `${type_contact}` === `Expert`)
 };

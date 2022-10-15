@@ -1,5 +1,5 @@
 {
-  "name": "Couleur Contacts",
+  "name": "Type de Contacts",
   "description": "Une extension carte qui affiche un placard de couleur en fonction du type de contact, Expert ou Client.",
   "scopes": ["crm.objects.contacts.read", "crm.objects.contacts.write"],
   "public": false,

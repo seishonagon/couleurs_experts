@@ -15,20 +15,6 @@ exports.main = async (context = {}, sendResponse) => {
   // Defines the first section of the CRM card
 
   try {
-    // Defines variables for API endpoint and response data
-    const resp = await hubspotClient.crm.contacts.basicApi.getById(hs_object_id);
-    const email = resp.properties.email
-    hubspotClient
-      .apiRequest({
-        method: 'GET',
-        path: `/crm/v4/objects/contacts/51/associations/companies`,
-      }).then(results => {
-        let objResult = results.body.results;
-        console.log(`the object is: ${objResult}`)
-      });
-
-    // const companyId = associatedCompanies.body[0].id;
-    // Defines how the returned data will be displayed
     sendResponse({
       sections: [{
           type: "heading",

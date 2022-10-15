@@ -1,7 +1,7 @@
 {
   "type": "crm-card",
   "data": {
-    "title": "Couleurs Contacts",
+    "title": "",
     "location": "crm.record.sidebar",
     "fetch": {
       "targetFunction": "crm-card",

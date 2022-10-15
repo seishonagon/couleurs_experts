@@ -27,7 +27,7 @@ exports.main = async (context = {}, sendResponse) => {
     "text": `Le type contact est ${type_contact}`,
   };
   let bandeau = bandeauContactClient
-  if (type_contact === 'Contact Expert') {
+  if (type_contact === 'Expert') {
     let bandeau = bandeauExpert;
   }
   console.log(`${type_contact}, ${bandeau.alt}`)

@@ -42,5 +42,5 @@ exports.main = async (context = {}, sendResponse) => {
       }], 
     });
   }
-  console.log(`${type_contact}, ${bandeau.alt}`, `${type_contact}` === `Expert`)
+  console.log(`${type_contact}, `${type_contact}` === `Expert`)
 };

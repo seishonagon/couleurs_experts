@@ -5,7 +5,7 @@ const hubspot = require('@hubspot/api-client');
 
 exports.main = async (context = {}, sendResponse) => {
   // Store contact info, configured as propertiesToSend in crm-card.json
-  const { hs_object_id, firstname, lastname, site, specialite_du_site } = context.propertiesToSend;
+  const { hs_object_id, firstname, lastname, type_contact } = context.propertiesToSend;
 
   // instantiate HubSpot Node API client
   const hubspotClient = new hubspot.Client({

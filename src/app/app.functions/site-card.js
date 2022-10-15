@@ -28,18 +28,18 @@ exports.main = async (context = {}, sendResponse) => {
   };
   
   if (`${type_contact}` === `Expert`) {
-    sendResponse({ sections: {
+    sendResponse({ sections: [{
         "type": "image",
         "src": "https://cdn.experconnect.com/crm/expert_green.png",
         "alt": "Bandeau vert expert"
-      }; 
+      }], 
     });
   } else {
-    sendResponse({ sections: {
+    sendResponse({ sections: [{
         "type": "image",
         "src": "https://cdn.experconnect.com/crm/contact_brown.png",
         "alt": "Bandeau brun contact client"
-      }; 
+      }], 
     });
   }
   console.log(`${type_contact}, ${bandeau.alt}`, `${type_contact}` === `Expert`)

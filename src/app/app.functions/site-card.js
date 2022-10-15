@@ -16,20 +16,17 @@ exports.main = async (context = {}, sendResponse) => {
 
   try {
     sendResponse({
-      sections: [{
-          type: "heading",
-          text: "Type Contact"
-        },
+      sections: [
+        {
+        "type": "image",
+        "src": "https://cdn.experconnect.com/crm/expert_green.png",
+        "alt": "Bandeau vert expert"
+      },
         {
           type: "text",
           format:"markdown",
           text: `Le type contact de ${firstname} ${lastname} est **${type_contact}**`
         },
-        {
-          "type": "image",
-          "src": "https://cdn.experconnect.com/crm/expert_green.png",
-          "alt": "A Welcome Sign sample image"
-        }
       ]
     });
   } catch (error) {

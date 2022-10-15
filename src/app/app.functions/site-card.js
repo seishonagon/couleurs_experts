@@ -24,6 +24,11 @@ exports.main = async (context = {}, sendResponse) => {
           type: "text",
           text: `Le type contact de ${firstname} ${lastname} est **${type_contact}**`
         },
+          {
+            "type": "image",
+            "src": "https://www.ui-extensibility.com/hubfs/welcome-sign.png",
+            "alt": "A Welcome Sign sample image"
+          }
       ]
     });
   } catch (error) {

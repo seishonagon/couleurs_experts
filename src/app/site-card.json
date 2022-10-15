@@ -1,7 +1,7 @@
 {
   "type": "crm-card",
   "data": {
-    "title": "",
+    "title": "Type de Contact",
     "location": "crm.record.sidebar",
     "fetch": {
       "targetFunction": "crm-card",

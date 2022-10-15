@@ -26,7 +26,7 @@ exports.main = async (context = {}, sendResponse) => {
   // Defines the first section of the CRM card
 
   try {    
-    sendResponse({ sections: [bandeauExpert, ...bandeauContactClient] });
+    sendResponse({ sections: [bandeauExpert, bandeauContactClient] });
     
     // sendResponse({
     //   sections: [{

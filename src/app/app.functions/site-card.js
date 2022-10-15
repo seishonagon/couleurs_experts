@@ -29,11 +29,6 @@ exports.main = async (context = {}, sendResponse) => {
           format: "markdown",
           text: "This serverless function will retrieve a specific contact by ID."
         },
-        {
-          type: "text",
-          format: "markdown",
-          text: `This contact's email is **${email}**`
-        },
       ]
     });
   } catch (error) {

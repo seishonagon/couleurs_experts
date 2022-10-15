@@ -11,20 +11,28 @@ exports.main = async (context = {}, sendResponse) => {
   const hubspotClient = new hubspot.Client({
     accessToken: context.secrets.PRIVATE_APP_ACCESS_TOKEN,
   });
-
+  
+  const bandeauExpert = {
+    "type": "image",
+    "src": "https://cdn.experconnect.com/crm/expert_green.png",
+    "alt": "Bandeau vert expert"
+  };
+  const bandeauContactClient = {
+    "type": "image",
+    "src": "https://cdn.experconnect.com/crm/contact_brown.png",
+    "alt": "Bandeau brun contact client"
+  };
   // Defines the first section of the CRM card
 
-  try {
-    sendResponse({
-      sections: [
-        {
-        "type": "image",
-        "src": "https://cdn.experconnect.com/crm/expert_green.png",
-        "alt": "Bandeau vert expert"
-      },
+  try {    sendResponse({
+      sections: [{
+          "type": "image",
+          "src": "https://cdn.experconnect.com/crm/expert_green.png",
+          "alt": "Bandeau vert expert"
+        },
         {
           type: "text",
-          format:"markdown",
+          format: "markdown",
           text: `Le type contact de ${firstname} ${lastname} est **${type_contact}**`
         },
       ]

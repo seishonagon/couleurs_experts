@@ -22,6 +22,10 @@ exports.main = async (context = {}, sendResponse) => {
     "src": "https://cdn.experconnect.com/crm/contact_brown.png",
     "alt": "Bandeau brun contact client"
   };
+  const errorMessage = {
+    "type": "text",
+    "text": "Le type contact n'est pas défini",
+  };
   
   if (type_contact === 'Client') {
     const bandeau = {
@@ -63,7 +67,7 @@ exports.main = async (context = {}, sendResponse) => {
         type: 'ERROR',
         body: `Error: ${error.message}`
       },
-      sections: [introMessage]
+      sections: [errorMessage]
     });
   }
 };

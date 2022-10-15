@@ -34,11 +34,17 @@ exports.main = async (context = {}, sendResponse) => {
         "alt": "Bandeau vert expert"
       }], 
     });
-  } else {
+  } else if (`${type_contact}` === `Contact`){
     sendResponse({ sections: [{
         "type": "image",
         "src": "https://cdn.experconnect.com/crm/contact_brown.png",
         "alt": "Bandeau brun contact client"
+      }], 
+    });
+  } else {
+    sendResponse({ sections: [{
+        "type": "text",
+        "text": "Ce contact n'est ni un expert ni un client",
       }], 
     });
   };

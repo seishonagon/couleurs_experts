@@ -26,38 +26,21 @@ exports.main = async (context = {}, sendResponse) => {
     "type": "text",
     "text": `Le type contact est ${type_contact}`,
   };
-  let bandeau = bandeauContactClient
+  
   if (`${type_contact}` === `Expert`) {
-    let bandeau = bandeauExpert;
-  }
-  console.log(`${type_contact}, ${bandeau.alt}`, `${type_contact}` === `Expert`)
-  // Defines the first section of the CRM card
-
-  try {    
-    sendResponse({ sections: [bandeau] });
-    
-    // sendResponse({
-    //   sections: [{
-    //       "type": "image",
-    //       "src": "https://cdn.experconnect.com/crm/expert_green.png",
-    //       "alt": "Bandeau vert expert"
-    //     },
-    //     {
-    //       type: "text",
-    //       format: "markdown",
-    //       text: `Le type contact de ${firstname} ${lastname} est **${type_contact}**`
-    //     },
-    //   ]
-    // });
-  } catch (error) {
-    console.error(error);
-    // "message" will create an error feedback banner when it catches an error
-    sendResponse({
-      message: {
-        type: 'ERROR',
-        body: `Error: ${error.message}`
-      },
-      sections: [errorMessage]
+    sendResponse({ sections: {
+        "type": "image",
+        "src": "https://cdn.experconnect.com/crm/expert_green.png",
+        "alt": "Bandeau vert expert"
+      }; 
+    });
+  } else {
+    sendResponse({ sections: {
+        "type": "image",
+        "src": "https://cdn.experconnect.com/crm/contact_brown.png",
+        "alt": "Bandeau brun contact client"
+      }; 
     });
   }
+  console.log(`${type_contact}, ${bandeau.alt}`, `${type_contact}` === `Expert`)
 };

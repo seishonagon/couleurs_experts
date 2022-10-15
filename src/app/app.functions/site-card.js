@@ -18,20 +18,11 @@ exports.main = async (context = {}, sendResponse) => {
     sendResponse({
       sections: [{
           type: "heading",
-          text: "Sample project custom CRM card"
+          text: "Type Contact"
         },
         {
           type: "text",
-          text: `This card will retrieve data on the contact record. It is attached to contact id ${hs_object_id}.`
-        },
-        {
-          type: "text",
-          text: `Le type contact de ${firstname} ${lastname} est ${type_contact}`
-        },
-        {
-          type: "text",
-          format: "markdown",
-          text: "This serverless function will retrieve a specific contact by ID."
+          text: `Le type contact de ${firstname} ${lastname} est **${type_contact}**`
         },
       ]
     });

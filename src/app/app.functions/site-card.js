@@ -8,9 +8,9 @@ exports.main = async (context = {}, sendResponse) => {
   const { hs_object_id, firstname, lastname, type_contact } = context.propertiesToSend;
 
   // instantiate HubSpot Node API client
-  const hubspotClient = new hubspot.Client({
-    accessToken: context.secrets.PRIVATE_APP_ACCESS_TOKEN,
-  });
+  // const hubspotClient = new hubspot.Client({
+  //   accessToken: context.secrets.PRIVATE_APP_ACCESS_TOKEN,
+  // });
   
   const bandeauExpert = {
     "type": "image",

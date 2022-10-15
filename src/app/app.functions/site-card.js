@@ -30,7 +30,7 @@ exports.main = async (context = {}, sendResponse) => {
   if (`${type_contact}` === `Expert`) {
     let bandeau = bandeauExpert;
   }
-  console.log(`${type_contact}, ${bandeau.alt}`)
+  console.log(`${type_contact}, ${bandeau.alt}`, `${type_contact}` === `Expert`)
   // Defines the first section of the CRM card
 
   try {    

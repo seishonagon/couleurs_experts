@@ -26,21 +26,11 @@ exports.main = async (context = {}, sendResponse) => {
     "type": "text",
     "text": `Le type contact est ${type_contact}`,
   };
-  
-  if (type_contact === 'Client') {
-    const bandeau = {
-      "type": "image",
-      "src": "https://cdn.experconnect.com/crm/expert_green.png",
-      "alt": "Bandeau vert expert"
-    };
-  } else {
-    const bandeau = {
-      "type": "image",
-      "src": "https://cdn.experconnect.com/crm/expert_green.png",
-      "alt": "Bandeau vert expert"
-    };
+  let bandeau = bandeauContactClient
+  if (type_contact === 'Contact Expert') {
+    let bandeau = bandeauExpert;
   }
-  
+  console.log(`${type_contact}, ${bandeau.alt}`)
   // Defines the first section of the CRM card
 
   try {    
